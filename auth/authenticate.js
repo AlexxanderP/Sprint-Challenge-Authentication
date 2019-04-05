@@ -1,9 +1,6 @@
 const jwt = require("jsonwebtoken");
 const db = require("../database/dbConfig.js");
-
-const jwtKey =
-  process.env.JWT_SECRET ||
-  "add a .env file to root of project with the JWT_SECRET variable";
+const jwtKey = require("../auth/secrets").jwtKey;
 
 // quickly see what this file exports
 module.exports = {
